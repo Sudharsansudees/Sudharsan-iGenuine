@@ -1,0 +1,4 @@
+Vanakkam Sir!
+
+These program are coded as per your instruction manuel,first of all i created all the necessary classes and implemented the containers,constructors etc etc, in the smartdevice class the abstarct return statment performFunction();, i implemented and over rided it in the light and thermostat,
+Then all were went smoothly and i aggregated the classes(SmartDebvice,Room) properly, but where i got stuck is using the setParameter, i really dont know how to implement to bypass the cod eto run, i impleneted 0 in the constuctor and implemented the set paramater, but if i remove the zero its showing error, i removed the variable from the constructor also but i cant able to accesses it,through which what i understand is "I need to know little bit much about the setParameter", Thats All , Thanking You.

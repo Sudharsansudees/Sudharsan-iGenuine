@@ -1,0 +1,29 @@
+Data Types:
+
+1. Primitive Data Type
+2. Non-Primitive Data Type
+
+Primitive:
+
+boolean -> 1bit; default=false
+char -> 2Bytes/16bits; default = \u0000
+byte -> 1Byte/8Bits; default=0; Range -128 (to) 127
+short -> 2Bytes/16Bits default=0; Range = -32768 (to) 32767
+int -> 4Byte/32Bits; default=0; Range = -2,147,483,648 (to) 2,147,483,647
+long -> 8Byte/64Bits; default=0; range = -9,223,372,036,854,775,808 (to) 9,223,372,036,854,775,807
+float ->4Byte/64Bits; default=0.0f; Range = unlimted
+double -> 8Byte/64Bits; default=0.00 ; Range = unlimited
+
+Non-Primitive:-> uppercase
+
+Class
+Object
+String
+Array
+Interface
+
+
+3 Types variable 
+.local -> public,private,protected
+.static
+.instance
