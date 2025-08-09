@@ -55,10 +55,14 @@ public class DublyLinkedList {
 
         }
 
-        current.next.prev=;
-        current.prev=newNode;
         newNode.prev=current;
+        newNode.next=current.next;
         current.next=newNode;
+        current.next.prev=newNode;
+
+
+
+
 
 
 
