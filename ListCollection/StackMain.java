@@ -4,13 +4,37 @@ public class StackMain {
     public static void main(String[]args){
 
 
-//        StackPro s = new StackPro(5);
-//        //StackPro s1 = new StackPro(5);
+        StackPro s = new StackPro(5);
+        StackPro s1 = new StackPro(5);
 //
-//        StackPro output = new StackPro(10);
-//        StackPro temp = new StackPro(10);
+        StackPro output = new StackPro(10);
+        StackPro temp = new StackPro(10);
 //
 //
+        s.Push("Java");
+
+        String count=s.Peek();
+        int size=count.length();
+
+
+
+        for(int i=0;i<size;i++){
+
+            output.Push(String.valueOf(count.charAt(i)));
+        }
+        String c1 = "";
+
+        while (!output.isEmpty()){
+            c1+=output.Pop();
+        }
+        System.out.print(c1);
+
+
+
+
+
+//        temp.Push(output.Pop());
+
 //        s.Push(34);
 //        s.Push(3);
 //        s.Push(31);

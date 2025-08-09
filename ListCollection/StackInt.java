@@ -1,18 +1,18 @@
 package ListCollection;
 
-public class StackPro {
-    private String[] stack;
+public class StackInt {
+    private int[] stack;
     private int top;
     private int maxSize;
 
-    StackPro(int Size){
-        stack = new String [Size];
+    StackInt(int Size){
+        stack = new int [Size];
         top=-1;
         maxSize=Size;
 
     }
 
-    public void Push(String Data){
+    public void Push(int Data){
         if(isFull()){
             System.out.println("Stack OverFlow");
             return;
@@ -21,17 +21,17 @@ public class StackPro {
         stack[++top]=Data;
     }
 
-    public String Pop(){
+    public int Pop(){
         if (isEmpty()){
             System.out.println("Stack UnderFlow");
-            return null;
+            return -1;
         }
         return stack[top--];
     }
-    public String Peek() {
+    public int Peek() {
         if (isEmpty()) {
             System.out.println("Stack Empty");
-            return null;
+            return -1;
         }
         return stack[top];
     }

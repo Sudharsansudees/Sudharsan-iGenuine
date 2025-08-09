@@ -10,9 +10,9 @@ public class MainLink {
         list.add(4);
 
         list.display();
-        list.removeLast();
+        list.addMid(7,2);
         list.display();
-        list.removeFirst();
+        list.removeMid(2);
         list.display();
     }
 

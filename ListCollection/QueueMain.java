@@ -2,39 +2,105 @@ package ListCollection;
 
 public class QueueMain {
     public static void main(String[] args) {
-        Queue q = new Queue(5);
-        Queue q1 = new Queue(5);
-        Queue output = new Queue(6);
-        Queue temp = new Queue(5);
+        QueueInt q = new QueueInt(8);
+        QueueInt q1 = new QueueInt(8);
+        QueueInt output1 = new QueueInt(10);
+
+        StackInt output = new StackInt(10);
+        StackInt temp1 = new StackInt(10);
+
+        QueueInt temp = new QueueInt(10);
 
 
 
+        q.enQueue(1);
         q.enQueue(2);
-        q.enQueue(7);
+        q.enQueue(3);
         q.enQueue(4);
-        q.enQueue(9);
+        q.enQueue(5);
+        q.enQueue(6);
+        q.enQueue(7);
         q.enQueue(8);
 
-        q1.enQueue(3);
-        q1.enQueue(6);
-        q1.enQueue(5);
-        q1.enQueue(2);
-        q1.enQueue(10);
 
 
 
-        int k=11;
-        while (!q.isEmpty() && !q1.isEmpty()){
-            int a=q.poll();
-            int b=q1.poll();
-            int sum=a+b;
 
-            if(sum==k){
-                output.enQueue(a);
-                output.enQueue(b);
-            }
-        }
-        output.display();
+
+
+        //Task 2
+//        int size=q.maxSize;
+//        while (!q.isEmpty()){
+//            q1.enQueue(q.poll());
+//
+//
+//        }
+//        for (int i=0;i<size/2;i++){
+//            q.enQueue(q1.poll());
+//        }
+//
+//        while (!q.isEmpty() && !q1.isEmpty()){
+//            temp.enQueue(q.poll());
+//            temp.enQueue(q1.poll());
+//        }
+//
+//        temp.display();
+
+//        q.display();
+//        q1.display();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         //Problem 1
+//        int k=3;
+//
+//        for(int i=0;i<k;i++){
+//            output.Push(q.poll());
+//        }
+//        while (!output.isEmpty()){
+//            temp.enQueue(output.Pop());
+//        }
+//        while (!q.isEmpty()){
+//            temp.enQueue(q.poll());
+//        }
+//
+//        temp.display();
+
+
+//        q.display();
+
+//        q1.enQueue(3);
+//        q1.enQueue(6);
+//        q1.enQueue(5);
+//        q1.enQueue(2);
+//        q1.enQueue(10);
+
+
+
+//        int k=11;
+//        while (!q.isEmpty() && !q1.isEmpty()){
+//            int a=q.poll();
+//            int b=q1.poll();
+//            int sum=a+b;
+//
+//            if(sum==k){
+//                output.enQueue(a);
+//                output.enQueue(b);
+//            }
+//        }
+//        output.display();
 
 
 

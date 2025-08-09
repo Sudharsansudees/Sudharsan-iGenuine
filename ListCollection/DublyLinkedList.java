@@ -1,11 +1,14 @@
 package ListCollection;
 
-public class LinkedList {
+public class DublyLinkedList {
+
     public int length;
     private Node head;
+    private Node tail;
     private class Node{
         int data;
         Node next;
+        Node prev;
         Node(int data){
             this.data=data;
         }
@@ -13,15 +16,16 @@ public class LinkedList {
 
     public void add(int data){
         Node newNode = new Node(data);
-        if(head==null){
-            head=newNode;
-            return;
+        if(tail==null){
+            head=tail=newNode;
+
         }
-        Node current = head;
-        while (current.next!=null){
-            current=current.next;
+        else {
+
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
         }
-        current.next=newNode;
     }
     public void addLast(int data){
         add(data);
@@ -30,9 +34,11 @@ public class LinkedList {
         Node newNode = new Node(data);
         if(head==null){
             head=newNode;
+            tail=newNode;
         }
         else {
             newNode.next=head;
+            head.prev=newNode;
             head=newNode;
         }
     }
@@ -40,14 +46,22 @@ public class LinkedList {
         Node newNode = new Node(data);
         if(head==null){
             head=newNode;
+            tail=newNode;
             return;
         }
         Node current=head;
         for(int i=0;i<index-1;i++){
             current=current.next;
+
         }
-        newNode.next=current.next;
+
+        current.next.prev=;
+        current.prev=newNode;
+        newNode.prev=current;
         current.next=newNode;
+
+
+
     }
     public void removeMid(int index){
         if(head==null){

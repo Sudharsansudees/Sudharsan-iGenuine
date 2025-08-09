@@ -1,19 +1,19 @@
 package ListCollection;
 
-public class Queue {
+public class QueueInt {
     public int length;
-    private String[] queue;
-    int front;
-    int rear;
-    private int maxSize;
-    public Queue(int size){
+    private int[] queue;
+    private int front;
+    private int rear;
+    int maxSize;
+    public QueueInt(int size){
         maxSize=size;
-        queue= new String[maxSize];
+        queue= new int[maxSize];
         front =-1;
         rear=-1;
     }
 
-    public void enQueue(String Data){
+    public void enQueue(int Data){
         if(isFull()){
             System.out.println("Queue is Full");
             return;
@@ -22,12 +22,12 @@ public class Queue {
         queue[++rear]=Data;
     }
 
-    public String deQueue(){
+    public int deQueue(){
         if(isEmpty()){
             System.out.println("Queue is Empty");
-            return null;
+            return -1;
         }
-        String value= queue[front];
+        int value= queue[front];
         if(front==rear){
             front=-1;
             rear=-1;
@@ -38,10 +38,10 @@ public class Queue {
 
     }
 
-    public String poll(){
+    public int poll(){
         return deQueue();
     }
-    public String element(){
+    public int element(){
         if(isEmpty()){
             System.out.println("Empty Queue");
 
@@ -57,7 +57,7 @@ public class Queue {
         return rear==maxSize-1;
     }
 
-    public void display(int size){
+    public void display(){
         if(isEmpty()){
             System.out.println("Queue is Empty");
         }
@@ -67,14 +67,8 @@ public class Queue {
         System.out.println();
     }
 
-    public int size(){
-        return  rear-front+1;
-    }
-
 
     public int length() {
-        if (isEmpty()) return 0;
-        return rear - front + 1;
+        return rear+1;
     }
-
 }
